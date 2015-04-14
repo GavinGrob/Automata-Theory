@@ -1,0 +1,56 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+
+\begin{document}
+
+Gavin Grob
+\\CS 510 Automata Theory
+\\Homework 3
+\\
+\\
+\\1. Prove the following language, $L_1$, is not regular using the pumping lemma. Assume $\Sigma = \{0, 1\}$. $L_1 = \{1^k y$ $|$ $y \in \Sigma^*$ and $y$ contains at most $k$ 1's for $k \geq$ 1 $\}$
+\\
+\\We have some number n
+\\$w \in L_1$ $w =  1^n0^n1^n$
+\\To prove $L_1$ is regular, these 3 steps must hold true while breaking $w$ into $xyz$
+\\ -    $y \neq \epsilon$
+\\ -    $|xy| \leq n$
+\\ -     for each $k \leq 0$, $xy^kz$ is in $L$
+\\This string $w$, forces y to be $1^i$ where 1 $\leq$ i $\leq$ n, since $|xy| \leq n$
+\\We can then not pump at all, but make k = 0
+\\So then we are left with $1^{n-i}0^n1^n$
+\\This is not in the Language $L_1$ because "$y$ contains at most $k$ 1's for $k \geq$ 1" is not true
+\\So $L_1$ is not regular
+\\
+\\
+\\
+2. Prove the following language, $L_2$, is not regular. You may use the pumping lemma or closure properties.
+\\$L_2 = \{ w$ $|$ $w = x_10x_20...x_{k-1}0x_k$ for $k \geq 0$ and each $x_i \in 1^*$ and $x_i \neq x_j$ for $i \neq j\}$
+\\
+\\We have some number n
+\\$w \in L_2$ $w = 1^n01^{n+1}0...0^{2n - 1}01^{2n}$
+\\To prove $L_2$ is regular, these 3 steps must hold true while breaking $w$ into $xyz$
+\\ -    $y \neq \epsilon$
+\\ -    $|xy| \leq n$
+\\ -     for each $k \leq 0$, $xy^kz$ is in $L$
+\\This string $w$, forces y to be $1^i$ where 1 $\leq$ i $\leq$ n, since $|xy| \leq n$
+\\So we are left with $xy1^a01^{n+1}0...01^{2n - 1}01^{2n}$, where $0 \leq a \leq n-1$, because it is possible $x = \epsilon$ and $y = 1$
+\\Because all possible stings of $y$ contain only 1's we can then pump $y^k$ to the point where  $1^{n} < xy \leq 1^{2n}$, this makes $x_1$ equal to some $x_i$ from $x_2$ to $x_k$
+\\This is not in the Language $L_2$ because "$x_i \neq x_j$ for $i \neq j$" is not true
+\\So $L_2$ is not regular
+\\
+
+
+%\section{}
+%\subsection{}
+
+
+
+\end{document}  

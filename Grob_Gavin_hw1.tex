@@ -1,0 +1,48 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{HW1}
+\author{Gavin Grob}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+1.To show that $\not\cong_L$ is an equivalence relation I must prove it is
+\\Reflexive: aRa for all a $\in$ X 
+\\Symmetric: aRb implies bRa for all a,b, $\in$X
+\\Transitive: aRb and bRc  imply aRc for all a,b,c $\in$X
+\\
+\\$a \not\cong_L a$
+\\If az$\in$L iff az$\in$L is true because az cannot both be in the language and not
+\\
+\\$a \not\cong_L b$ and $b \not\cong_L a$
+\\If az$\in$L iff bz$\in$L then bz$\in$L iff az$\in$L, this is true because in the first case if there is no string z that can be concatenated to make a=b then there would still not be any sting z that can make b=a
+\\
+\\$a \not\cong_L b$ and $b \not\cong_L c$ implies $a \not\cong_L c$
+\\If az1$\in$L iff bz1$\in$L and bz2$\in$L iff cz2$\in$L, because there is no string z1 that can make bz1$\notin$L, and no z2 bz2$\notin$L than there is no string z3 that can make az3 $\in$NL and cz3$\in$L, so $a \not\cong_L c$
+\\
+\\Example: is we have a Language L of {0,1} that only accepts strings that start with a 1.
+\\
+\\If we have string a = 101 then $a \not\cong_L a$ is reflexive
+\\
+\\If we have string b = 1 then $a \not\cong_L b$ implies $b \not\cong_L a$ is true because there is no string z to make az and bz not start with 1.
+\\
+\\If we have string c = 1111 $a \not\cong_L b$ and $b \not\cong_L c$ implies $a \not\cong_L c$ because if there is no string z to make a and b not in language L, and no sting z to make b and c not in language L. Then there can't be any z to make a and c not in language L.
+\\
+\\
+\indent 2.If there is a finite number of strings k, then there must be a limit to a length of a string I will call that H.
+\\
+\\Let x and y be strings $\leq$H, and let L be any language of strings $\leq$H. We say that x and y are differentiable by L if some string z$\leq$H, exists whereby exactly one of the strings xz and yz is a member of L. Otherwise, for every string z$\leq$H, xz$\notin$L iff yz$\notin$L and we say that x and y are in differentiable by L.
+
+\maketitle
+%\section{}
+%\subsection{}
+
+
+
+\end{document}  
